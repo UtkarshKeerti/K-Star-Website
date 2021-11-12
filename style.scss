@@ -46,10 +46,13 @@
       width: 100%;
      .bottom-cloud{
        position: absolute;
-       width: 110vw;
-       height: 600px;
+       width: 110%;
+       min-height: 50%;
        bottom: -120px;
-       left: -8px;
+       left: -20px;
+     }
+     .bottom-cloud-mob{
+       display: none;
      }
     }
     .planes{
@@ -76,4 +79,120 @@
       }
     }
   }
+}
+
+.p-orange {
+  top: 30%;
+  right: 150px;
+  height: 80px;
+  width: 50px;
+  animation: anim 2s ease-in-out infinite 0.3s;
+
+}
+@keyframes anim {
+  0%{opacity:0;}
+  25%{opacity:0.5;}
+  50%{opacity:1;}
+  75%{opacity:0.5;}
+  100% {
+      top:0%;
+      opacity: 0;
+  }
+}
+
+.p-yellow {
+  top: 32%;
+  left: 180px;
+  height: 100px;
+  width: 80px;
+  animation: anim 2s ease-in-out infinite 0.3s;
+}
+
+.p-blue {
+  top: 60%;
+  right: 300px;
+  height: 120px;
+  width: 60px;
+  animation: anim 2s ease-in-out infinite 0.3s;
+}
+.bottom-cloud{
+  height: fit-content;
+  transform:translateY(0%);
+  animation: cloud 1.2s ease-in-out infinite 0.4s;
+}
+.bottom-cloud-mob{
+  height: fit-content;
+  transform:translateY(0%);
+  animation: cloud 1.2s ease-in-out infinite 0.4s;
+}
+@keyframes cloud {
+  50%{transform:translateX(0.6%);}
+  100%{transform:translateX(0%)}
+}
+
+@media screen and (max-width:767px){
+  .mother-cont{
+    .coming-soon{
+    padding: 1.5rem 2rem 0 2rem;
+    }
+  }
+#coming,#soon{
+   font-size: 2.5em;
+}
+#intro{
+   font-size: 0.95em;
+}
+#logo {
+   width:15%;
+   height: 15%;
+   position:flex-start;
+}
+#ksac{
+   width: 15%;
+   height: 15%;
+   position: flex-end;
+}
+#kstar{
+   width: 70%;
+   height: 60%;
+}
+.planes{
+   height: 40vh;
+}
+#yell {
+  top: 32%;
+  left:5%;
+  height: 60px;
+  width: 40px;
+  animation: anim 2s ease-in-out infinite 0.5s;
+}
+#blu{
+  top: 60%;
+  right:12%;
+  height: 60px;
+  width: 40px;
+  animation: anim 2s ease-in-out infinite 0.5s;
+}
+#oran{
+top: 30%;
+right: 5%;
+height: 40px;
+width: 30px;
+animation: anim 2s ease-in-out infinite 0.5s;
+}
+
+.bottom-cloud{
+  display: none;
+}
+
+.bottom-cloud-mob{
+  display: block !important;
+  width: 110%;
+  min-height: 10vh;
+  bottom: -25px;
+  left: -20px;
+  position: absolute;
+  // height:auto;
+}
+
 }
