@@ -127,6 +127,19 @@
   animation: anim 2s ease-in-out infinite 0.3s;
 
 }
+#oran{
+  top: 80%;
+ }
+ #blu{
+     top: 90%;
+ }
+ #yell{
+     top: 92%;
+ }
+ #cloud{
+     width: 110vw;
+     left: -8%;
+ }
 @keyframes anim {
   0%{opacity:0;}
   25%{opacity:0.5;}
@@ -143,7 +156,7 @@
   left: 180px;
   height: 100px;
   width: 80px;
-  animation: anim 2s ease-in-out infinite 0.3s;
+  animation: anim 2s ease-in-out infinite 1s;
 }
 
 .p-blue {
@@ -151,7 +164,7 @@
   right: 300px;
   height: 120px;
   width: 60px;
-  animation: anim 2s ease-in-out infinite 0.3s;
+  animation: anim 2s ease-in-out infinite 0s;
 }
 .bottom-cloud{
   height: fit-content;
@@ -198,25 +211,25 @@
    height: 40vh;
 }
 #yell {
-  top: 32%;
+  top: 92%;
   left:5%;
   height: 60px;
   width: 40px;
-  animation: anim 2s ease-in-out infinite 0.5s;
+  animation: anim 2s ease-in-out infinite 2s;
 }
 #blu{
-  top: 60%;
+  top: 90%;
   right:12%;
   height: 60px;
   width: 40px;
-  animation: anim 2s ease-in-out infinite 0.5s;
+  animation: anim 2s ease-in-out infinite 0s;
 }
 #oran{
-top: 30%;
+top: 80%;
 right: 5%;
 height: 40px;
 width: 30px;
-animation: anim 2s ease-in-out infinite 0.5s;
+animation: anim 2s ease-in-out infinite 1.5s;
 }
 
 .bottom-cloud{
