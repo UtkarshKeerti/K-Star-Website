@@ -69,9 +69,15 @@
         font-family: 'Roboto', sans-serif;
       }
       p{
-        color: #fff;
+        color: rgba(255, 255, 255, 0.678);
         font-size: 1.5rem;
         letter-spacing: 4px;
+        // opacity: 0.7;
+        span{
+        color: rgba(255, 255, 255, 1);
+          font-weight: 900;
+          opacity: 1 !important;
+        }
       }
     }
     .bottom-part{
