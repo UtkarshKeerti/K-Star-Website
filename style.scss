@@ -365,6 +365,14 @@ animation: anim 2s ease-in-out infinite 1.5s;
 	transition: opacity 3s ease;
 }
 
-// .curtainBody:hover .overlay {
-// 	opacity: 0;
-// }
+@media screen and (width:768px){
+  .bottom-cloud{
+    bottom: -150px !important;
+  }
+}
+
+@media screen and (width:1024px){
+  .bottom-cloud{
+    bottom: -200px !important;
+  }
+}
