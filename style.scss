@@ -25,9 +25,15 @@ $brown: #b2a98f;
       display: flex;
       justify-content: space-between;
       img{
-        width: 70px;
-        height: 60px;
+        width: 60px;
+        height: 50px;
       }
+    }
+    .main-cont{
+      // height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .center-part{
       width: 100%;
@@ -37,14 +43,14 @@ $brown: #b2a98f;
       flex-direction: column;
       img{
         width: 350px;
-        height: 150px;
+        height: 130px;
         margin-bottom: 10px;
       }
       h1{
-        font-size: 6rem;
+        font-size: 5rem;
         color: $white;
-        margin-bottom: 0.5rem;
-        letter-spacing: 15px;
+        // margin-bottom: 0.5rem;
+        letter-spacing: 5px;
         text-shadow: 0px 3px 0px $brown,0px 14px 10px rgba(0,0,0,0.15), 0px 24px 2px rgba(0,0,0,0.1),0px 34px 30px rgba(0,0,0,0.1);
         font-family: 'Roboto', sans-serif;
       }
@@ -52,6 +58,7 @@ $brown: #b2a98f;
         color: rgba(255, 255, 255, 0.678);
         font-size: 1.5rem;
         letter-spacing: 4px;
+        font-family: 'Roboto', sans-serif;
         // opacity: 0.7;
         span{
         color: rgba(255, 255, 255, 1);
@@ -162,9 +169,26 @@ $brown: #b2a98f;
 }
 
 @media screen and (max-width:767px){
+  body{
+    overflow: hidden;
+  }
   .mother-cont{
+    overflow: hidden;
     .coming-soon{
     padding: 1.5rem 2rem 0 2rem;
+    }
+    .center-part{
+      display: block;
+      // justify-content: center !important;
+      p{
+        white-space: nowrap;
+      }
+    }
+    .main-cont{
+      height: 60vh;
+    }
+    .planes{
+      height: 0 !important;
     }
   }
 #coming,#soon{
@@ -187,9 +211,9 @@ $brown: #b2a98f;
    width: 70%;
    height: 60%;
 }
-.planes{
-   height: 40vh;
-}
+// .planes{
+//    height: 40vh;
+// }
 #yell {
   top: 92%;
   left:5%;
