@@ -3,14 +3,20 @@
   margin: 0;
   padding: 0;
 }
+
+body{
+  overflow: hidden;
+}
+
+// COLOR VARIABLES
+
 $curtain: #004E92;
 $white: #fff;
 $black-ish: #000428;
 $brown: #b2a98f;
 
-body{
-  overflow: hidden;
-}
+// LANDING PAGE
+
 .mother-cont{
   position: absolute;
   overflow: hidden;
@@ -175,99 +181,7 @@ body{
   100%{transform:translateX(0%)}
 }
 
-@media screen and (max-width:767px){
-  body{
-    overflow: hidden;
-  }
-  .mother-cont{
-    overflow: hidden;
-    .coming-soon{
-    padding: 1.5rem 2rem 0 2rem;
-    }
-    .center-part{
-      display: block;
-      // justify-content: center !important;
-      p{
-        white-space: nowrap;
-      }
-    }
-    .main-cont{
-      height: 60vh;
-    }
-    .planes{
-      height: 0 !important;
-    }
-    .top-logos{
-      #logo{
-        width: 60px !important;
-        height: 40px !important;
-      }
-      #ksac{
-        width: 60px !important;
-        height: 50px !important;
-      }
-    }
-  }
-#coming,#soon{
-   font-size: 2.5em;
-}
-#intro{
-   font-size: 0.95em;
-}
-#logo {
-   width:15%;
-   height: 15%;
-   position:flex-start;
-}
-#ksac{
-   width: 15%;
-   height: 15%;
-   position: flex-end;
-}
-#kstar{
-   width: 70%;
-   height: 60%;
-}
-// .planes{
-//    height: 40vh;
-// }
-#yell {
-  top: 92%;
-  left:5%;
-  height: 60px;
-  width: 40px;
-  animation: anim 2s ease-in-out infinite 2s;
-}
-#blu{
-  top: 90%;
-  right:12%;
-  height: 60px;
-  width: 40px;
-  animation: anim 2s ease-in-out infinite 0s;
-}
-#oran{
-top: 80%;
-right: 5%;
-height: 40px;
-width: 30px;
-animation: anim 2s ease-in-out infinite 1.5s;
-}
-
-.bottom-cloud{
-  display: none;
-}
-
-.bottom-cloud-mob{
-  display: block !important;
-  width: 110%;
-  // min-height: 10vh;
-  bottom: 0;
-  left: -10px;
-  position: absolute;
-  // height:auto;
-}
-
-}
+// cURTAIN SECTION
 
 .curtainContainer {
 	position: absolute;
@@ -404,6 +318,121 @@ animation: anim 2s ease-in-out infinite 1.5s;
 	height: 100vh;
 	background: linear-gradient(to top, rgba(2, 2, 2, 0) 0vh, rgb(0, 0, 0) 100vh);
 	transition: opacity 3s ease;
+}
+
+// MEDIA QUERIES
+
+@media screen and (max-width:767px){
+  body{
+    overflow: hidden;
+  }
+  .mother-cont{
+    overflow: hidden;
+    .coming-soon{
+    padding: 1.5rem 2rem 0 2rem;
+    }
+    .center-part{
+      display: block;
+      // justify-content: center !important;
+      p{
+        white-space: nowrap;
+      }
+    }
+    .main-cont{
+      height: 60vh;
+    }
+    .planes{
+      height: 0 !important;
+    }
+    .top-logos{
+      #logo{
+        width: 60px !important;
+        height: 40px !important;
+      }
+      #ksac{
+        width: 60px !important;
+        height: 50px !important;
+      }
+    }
+  }
+#coming,#soon{
+   font-size: 2.5em;
+}
+#intro{
+   font-size: 0.95em;
+}
+#logo {
+   width:15%;
+   height: 15%;
+   position:flex-start;
+}
+#ksac{
+   width: 15%;
+   height: 15%;
+   position: flex-end;
+}
+#kstar{
+   width: 70%;
+   height: 60%;
+}
+// .planes{
+//    height: 40vh;
+// }
+#yell {
+  top: 92%;
+  left:5%;
+  height: 60px;
+  width: 40px;
+  animation: anim 2s ease-in-out infinite 2s;
+}
+#blu{
+  top: 90%;
+  right:12%;
+  height: 60px;
+  width: 40px;
+  animation: anim 2s ease-in-out infinite 0s;
+}
+#oran{
+top: 80%;
+right: 5%;
+height: 40px;
+width: 30px;
+animation: anim 2s ease-in-out infinite 1.5s;
+}
+
+.bottom-cloud{
+  display: none;
+}
+
+.bottom-cloud-mob{
+  display: block !important;
+  width: 110%;
+  // min-height: 10vh;
+  bottom: 0;
+  left: -10px;
+  position: absolute;
+  // height:auto;
+}
+
+}
+
+@media screen and (max-width:1200px){
+  .mother-cont{
+    .coming-soon{
+      .center-part{
+        img{
+          width: 300px;
+          height: 100px;
+        }
+        h1{
+          font-size: 3.5rem;
+        }
+        p{
+          font-size: 1rem;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (width:768px){
