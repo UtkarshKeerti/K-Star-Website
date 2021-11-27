@@ -3,17 +3,27 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+  list-style: none;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;
 }
-
+.logos{
+  display: flex;
+}
 .mother-cont {
   position: absolute;
-  overflow: hidden;
+  overflow-x:hidden;
   height: 100vh;
   width: 100vw;
+}
+#intro{
+  font: normal normal bold 47px/63px Segoe UI;
+  letter-spacing: 14.1px;
+  color:#FEC416;
 }
 
 .mother-cont .coming-soon {
@@ -21,9 +31,10 @@ body {
   width: 100vw;
   padding: 2.5rem 3.25rem 0 3.25rem;
   background: transparent -webkit-gradient(linear, left bottom, left top, from(#000428), to(#004E92)) 0% 0% no-repeat padding-box;
-  background: transparent linear-gradient(0deg, #000428 0%, #004E92 100%) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(0deg, #7840A2 0%, #2A0645 100%) 0% 0% no-repeat padding-box;
+  opacity: 1;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .mother-cont .coming-soon .top-logos {
@@ -143,25 +154,82 @@ body {
 }
 
 .p-orange {
-  top: 30%;
   right: 150px;
-  height: 80px;
-  width: 50px;
-  -webkit-animation: anim 2s ease-in-out infinite 0.3s;
-          animation: anim 2s ease-in-out infinite 0.3s;
+  height: 120px;
+  width: 103px;
+  
 }
-
+#coming{
+  font: normal normal bold  71px/95px Segoe UI;
+  letter-spacing: 0px ;
+  color: #FFFFFF ;
+  opacity: 1 ;
+  text-shadow: none ;
+  font-size:4rem;
+}
 #oran {
-  top: 80%;
+  top: 40%;
+  height:120px;
+  width:103px;
 }
 
 #blu {
-  top: 90%;
+  top: 10%;
+  right: 35%;
+  height:144px;
+  width:138px;
 }
 
 #yell {
-  top: 92%;
+  top: 25%;
+  left:25%;
 }
+.timer{
+  margin:2% 0px 0px 0px;
+  width:35vw;
+  height:10vh;
+  font-size:2rem;
+  color:white;
+  opacity: 1;
+  word-spacing: 2rem;
+  overflow: hidden;
+}
+.day{
+  
+  font: normal normal bold 2rem Segoe UI;
+  letter-spacing: 0px;
+  font-weight: 700;
+  opacity: 1;
+  color: #fff;
+  background: transparent url(./assets/plane-blue.png) no-repeat padding-box !important;
+  
+  
+}
+.tbg{
+height: 6vh;
+width: 6vw;
+
+/* background-image: url('holder.png'); */
+opacity: 1;
+}
+.arrow{
+  height: 6vh;
+  width: 6vw;
+  background-image:url('arrow.png');
+}
+#colon-1 , #colon-2, #colon-3{
+  font-size:3rem;
+  font-weight: 100;
+  opacity: 1;
+  color: #fff;
+}
+#colon-4,#colon-5,#colon-6,#colon-7,#colon-8{
+   font-weight: 100;
+   opacity: 1;
+   color: #fff;
+   margin-top:-1%;
+}
+
 
 #cloud {
   width: 110vw;
@@ -211,8 +279,6 @@ body {
   left: 180px;
   height: 100px;
   width: 80px;
-  -webkit-animation: anim 2s ease-in-out infinite 1s;
-          animation: anim 2s ease-in-out infinite 1s;
 }
 
 .p-blue {
@@ -220,18 +286,16 @@ body {
   right: 300px;
   height: 120px;
   width: 60px;
-  -webkit-animation: anim 2s ease-in-out infinite 0s;
-          animation: anim 2s ease-in-out infinite 0s;
 }
 
 .bottom-cloud {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  -webkit-transform: translateY(0%);
+  /* -webkit-transform: translateY(0%);
           transform: translateY(0%);
   -webkit-animation: cloud 1.2s ease-in-out infinite 0.4s;
-          animation: cloud 1.2s ease-in-out infinite 0.4s;
+          animation: cloud 1.2s ease-in-out infinite 0.4s; */
 }
 
 .bottom-cloud-mob {
@@ -240,8 +304,7 @@ body {
   height: fit-content;
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
-  -webkit-animation: cloud 1.2s ease-in-out infinite 0.4s;
-          animation: cloud 1.2s ease-in-out infinite 0.4s;
+  
 }
 
 @-webkit-keyframes cloud {
@@ -277,7 +340,7 @@ body {
   margin: auto;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
-  overflow: hidden;
+  overflow-x: hidden;
   -webkit-transition: -webkit-transform 6s ease;
   transition: -webkit-transform 6s ease;
   transition: transform 6s ease;
@@ -421,7 +484,7 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .overlay {
@@ -440,10 +503,10 @@ body {
 
 @media screen and (max-width: 767px) {
   body {
-    overflow: hidden;
+    overflow-x: hidden;
   }
   .mother-cont {
-    overflow: hidden;
+    overflow-x: hidden;
   }
   .mother-cont .coming-soon {
     padding: 1.5rem 2rem 0 2rem;
@@ -468,7 +531,11 @@ body {
     width: 60px !important;
     height: 50px !important;
   }
-  #coming, #soon {
+  .top-logos{
+    display: flex;
+    justify-content: space-between;
+  }
+  #coming {
     font-size: 2.5em;
   }
   #intro {
@@ -479,6 +546,12 @@ body {
     height: 15%;
     position: flex-start;
   }
+  #logo-2{
+    width: 1vw !important;
+    height: 1vh !important;
+    position: flex-start;
+    top:0;
+  }
   #ksac {
     width: 15%;
     height: 15%;
@@ -486,16 +559,14 @@ body {
   }
   #kstar {
     width: 70%;
-    height: 60%;
+    height: 90%;
   }
   #yell {
     top: 92%;
     left: 5%;
     height: 60px;
     width: 40px;
-    -webkit-animation: anim 2s ease-in-out infinite 2s;
-            animation: anim 2s ease-in-out infinite 2s;
-  }
+      }
   #blu {
     top: 90%;
     right: 12%;
@@ -522,6 +593,27 @@ body {
     left: -10px;
     position: absolute;
   }
+
+  .timer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width:auto;
+    font-size: 1rem;
+    color: white;
+    opacity: 1;
+    text-align: center;
+    background:url(holder.png) no-repeat;
+    
+  }
+  .contA{
+    height: 5vh;
+    width: 5vw;
+    background:url(holder.png) 0% 0% no-repeat padding-box;
+    opacity: 1;
+    position: relative;
+  }
+  
 }
 
 @media screen and (max-width: 1200px) {

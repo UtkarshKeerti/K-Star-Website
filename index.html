@@ -17,66 +17,117 @@
 </head>
 <body>
   <div class="mother-cont">
-    <!-- <div class="curtain">
-      <button class="reveal">Reveal</button>
-    </div> -->
+  
     <div class="coming-soon">
       <div class="top-logos">
-        <img src="./assets/kiit-logo.png" alt="" id="logo">
-        <img src="./assets/k-sac logo.png" alt="" id="ksac">
+        <ul class="logos">
+          <li><img src="./assets/kiit-logo.png" alt="" id="logo"></li>
+          <li><img src="./assets/k-sac logo.png" alt="" id="logo-2"></li>
+        </ul>
+        
+        
+        <img src="./assets/Icon ionic-ios-chatbubbles@2x.png" alt="" id="ksac">
       </div>
       <div class="main-cont">
         <div class="center-part">
-          <img  src="./assets/k-star logo.png" alt=""id="kstar">
-          <h1 id="coming">COMING</h1>
-          <h1 id="soon">SOON</h1>
-          <p id="intro">Exclusively For <span>First</span> Years</p>
+          <img  src="./assets/logo-blank@2x.png" alt=""id="kstar">
+         
+          <p id="intro">Champion's &nbspPride</p>
+         
+           <h1 id="coming">25<sup>th</sup> &nbsp-&nbsp27<sup>th</sup>&nbsp December</h1>
+          <div class="timer">
+            <table class="timer">
+              <tr>
+                <td>
+                  <span id="Day" class="contA"></span>
+                </td>
+                <td>
+                   <span id="Hour"class="contA"></span>
+                </td>
+                <td>
+                    <span id="minute"class="contA"></span>
+                </td>
+                <td>
+                    <span id="second"class="contA"></span>
+                </td>
+                <tr>
+                  <td> <span class="contA">days</span>
+                  </td>
+                  <td>
+                   <span class="contA">hours</span>
+                  </td>
+                  <td>
+                   <span class="contA">minutes</span>
+                  </td>
+                  <td>
+                    <span class="contA">seconds</span>
+                  </td>
+                </tr>
+              </tr>
+            </table>
+            
+           
+            
+            
+          
+          </div>
+          <div class="timer" id="placeholder">
+           
+            
+            
+            
+          </div>
+          
+          <p id="colon-4">Times &nbsp Remaining</p>
           <div class="planes">
-            <img class="p-orange" src="./assets/plane orange.png" alt=""id="oran">
+            <img class="p-orange" src="./assets/Group 218@2x.png" alt=""id="oran">
             <img class="p-yellow" src="./assets/plane yellow.png" alt=""id="yell">
-            <img class="p-blue" src="./assets/plane-blue.png" alt=""id="blu">
+            <img class="p-blue" src="./assets/Group219@2x.png" alt=""id="blu">
           </div>
         </div>
       </div>
        <div class="bottom-part">
+         
         <img class="bottom-cloud" src="./assets/bottom-cloud.png" alt="">
         <img class="bottom-cloud-mob" src="./assets/cloud-mob.png" alt="">
       </div>
     </div>
   </div>
-  <div class="curtainBody">
-    <div id="leftCurtain" class="curtainContainer">
-      <div class="unCurtain"></div>
-      <div class="unCurtain"></div>
-      <div class="unCurtain"></div>
-      <div class="unCurtain"></div>
-      <div class="unCurtain"></div>
-      <div class="unCurtain"></div>
-      <div class="unCurtain"></div>
-      <div class="unCurtain"></div>
-      <div class="unCurtain"></div>
-      <div class="unCurtain"></div>
-      <div class="unCurtain"></div>
-      <div class="unCurtain"></div>
-    </div>
-    <div id="rightCurtain" class="curtainContainer">
-      <div class="unCurtain"></div>
-      <div class="unCurtain"></div>
-      <div class="unCurtain"></div>
-      <div class="unCurtain"></div>
-      <div class="unCurtain"></div>
-      <div class="unCurtain"></div>
-      <div class="unCurtain"></div>
-      <div class="unCurtain"></div>
-      <div class="unCurtain"></div>
-      <div class="unCurtain"></div>
-      <div class="unCurtain"></div>
-      <div class="unCurtain"></div>
-    </div>
-    <div class="overlay"></div>
-  </div>
-
+  <div class="arrow"></div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="./main.js"></script>
+  <script>
+// Set the date we're counting down to
+var countDownDate = new Date("Dec 14, 2021 23:59:59").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.querySelector("#Day").innerHTML = days  ;
+  document.querySelector("#Hour").innerHTML =hours ;
+  document.querySelector("#minute").innerHTML =minutes ;
+  document.querySelector("#second").innerHTML =seconds ;
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
 </body>
 </html> 
