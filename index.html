@@ -92,42 +92,69 @@
         <img class="bottom-cloud-mob" src="./assets/cloud-mob.png" alt="">
       </div>
     </div>
+    <!-- <div class="arrow"></div> -->
+
+    <div class="mid-part">
+      <div style="text-align: center; margin-bottom: 7rem;" class="top-text">
+        <img src="./assets/mid-part-heading.png" alt="">
+      </div>
+      <div class="cart">
+        <img class="cart-img" src="./assets/cart.png" alt="">
+        <div class="cart-items">
+          <div class="item">
+            <img src="./assets/singing.png" alt="">
+            <h2>Music</h2>
+          </div>
+          <div class="item">
+            <img src="./assets/dancing.png" alt="">
+            <h2>Dance</h2>
+          </div>
+          <div class="item">
+            <img src="./assets/painting.png" alt="">
+            <h2>Painting</h2>
+          </div>
+        </div>
+      </div>
+      <div class="cart">
+        <img class="cart-img" src="./assets/cart.png" alt="">
+        <div class="cart-items">
+          <div class="item">
+            <img src="./assets/acting.png" alt="">
+            <h2>Acting</h2>
+          </div>
+          <div class="item">
+            <img src="./assets/design.png" alt="">
+            <h2>Design</h2>
+          </div>
+          <div class="item">
+            <img src="./assets/snapshot.png" alt="">
+            <h2>Snapshot</h2>
+          </div>
+        </div>
+      </div>
+      <div class="cart">
+        <img class="cart-img" src="./assets/cart.png" alt="">
+        <div class="cart-items">
+          <div class="item">
+            <img src="./assets/fashion.png" alt="">
+            <h2>Fashion</h2>
+          </div>
+          <div class="item">
+            <img src="./assets/Short-film.png" alt="">
+            <h2>Short-Film</h2>
+          </div>
+          <a class="item" href="./item-html/writing.html">
+            <div>
+              <img src="./assets/writing.png" alt="">
+              <h2>Writing</h2>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="arrow"></div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="./main.js"></script>
-  <script>
-// Set the date we're counting down to
-var countDownDate = new Date("Dec 14, 2021 23:59:59").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-    
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-    
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-  // Output the result in an element with id="demo"
-  document.querySelector("#Day").innerHTML = days  ;
-  document.querySelector("#Hour").innerHTML =hours ;
-  document.querySelector("#minute").innerHTML =minutes ;
-  document.querySelector("#second").innerHTML =seconds ;
-    
-  // If the count down is over, write some text 
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
-</script>
 
 </body>
 </html> 
