@@ -16,12 +16,13 @@ body {
   overflow-x: hidden;
 }
 .logos{
-  display: flex;
+  display: grid;
+  grid-template-columns:repeat(2,6vw);
 }
 .mother-cont {
-  position: absolute;
+  position: relative;
   overflow-x:hidden;
-  height: 100vh;
+  height: fit-content;
   width: 100vw;
 }
 #intro{
@@ -31,7 +32,7 @@ body {
 }
 
 .mother-cont .coming-soon {
-  min-height: 100vh;
+  min-height: 90vh;
   width: 100vw;
   padding: 2.5rem 3.25rem 0 3.25rem;
   background: transparent -webkit-gradient(linear, left bottom, left top, from(#000428), to(#004E92)) 0% 0% no-repeat padding-box;
@@ -118,17 +119,31 @@ body {
 
 .mother-cont .coming-soon .bottom-part {
   width: 100%;
+  margin-top: 40%
 }
 
-.mother-cont .coming-soon .bottom-part .bottom-cloud {
+.mother-cont .coming-soon .bottom-part #bottom-cloud {
   position: absolute;
   width: 110%;
-  min-height: 50%;
   bottom: 0px;
   left: -20px;
+  background-image:url(./assets/bottom-cloud-new.png);
+  background-attachment:fixed;
+  background-color: transparent;
+}
+.mother-cont .coming-soon .Arrow {
+display: flex;
+justify-content:center;
+transform:translateY(10%);
 }
 
-.mother-cont .coming-soon .bottom-part .bottom-cloud-mob {
+.mother-cont .coming-soon  #arrow{
+  display:block;
+  color:#2A0645;
+  font-size:5rem;
+}
+
+.mother-cont .coming-soon  .bottom-cloud-mob {
   display: none;
 }
 
@@ -156,6 +171,7 @@ body {
   height: 120px;
   width: 60px;
 }
+
 
 .p-orange {
   right: 150px;
@@ -188,16 +204,7 @@ body {
   top: 25%;
   left:25%;
 }
-.timer{
-  margin:2% 0px 0px 0px;
-  width:35vw;
-  height:10vh;
-  font-size:2rem;
-  color:white;
-  opacity: 1;
-  word-spacing: 2rem;
-  overflow: hidden;
-}
+
 .day{
   
   font: normal normal bold 2rem Segoe UI;
@@ -219,7 +226,7 @@ opacity: 1;
 .arrow{
   height: 6vh;
   width: 6vw;
-  background-image:url('arrow.png');
+  background-image:url('./assets/arrow.png');
 }
 #colon-1 , #colon-2, #colon-3{
   font-size:3rem;
@@ -228,16 +235,18 @@ opacity: 1;
   color: #fff;
 }
 #colon-4,#colon-5,#colon-6,#colon-7,#colon-8{
-   font-weight: 100;
+   font-weight: 300;
    opacity: 1;
    color: #fff;
-   margin-top:-1%;
+   margin-top:3%;
 }
 
 
 #cloud {
-  width: 110vw;
+  width: 100vw;
   left: -8%;
+  margin-top: -6%;
+  z-index:5;
 }
 
 @-webkit-keyframes anim {
@@ -292,24 +301,11 @@ opacity: 1;
   width: 60px;
 }
 
-.bottom-cloud {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  /* -webkit-transform: translateY(0%);
-          transform: translateY(0%);
-  -webkit-animation: cloud 1.2s ease-in-out infinite 0.4s;
-          animation: cloud 1.2s ease-in-out infinite 0.4s; */
-}
+/* Timer and Cloud */
 
-.bottom-cloud-mob {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  -webkit-transform: translateY(0%);
-          transform: translateY(0%);
-  
-}
+
+
+
 
 @-webkit-keyframes cloud {
   50% {
@@ -685,8 +681,8 @@ opacity: 1;
     font-size: 0.95em;
   }
   #logo {
-    width: 15%;
-    height: 15%;
+    width: 11%;
+    height: 11%;
     position: flex-start;
   }
   #logo-2{
@@ -696,9 +692,9 @@ opacity: 1;
     top:0;
   }
   #ksac {
-    width: 15%;
-    height: 15%;
     position: flex-end;
+    color: whitesmoke !important;
+    font-size:1.9rem !important;
   }
   #kstar {
     width: 70%;
@@ -726,9 +722,8 @@ opacity: 1;
     -webkit-animation: anim 2s ease-in-out infinite 1.5s;
             animation: anim 2s ease-in-out infinite 1.5s;
   }
-  .bottom-cloud {
-    display: none;
-  }
+  
+
   .bottom-cloud-mob {
     display: block !important;
     width: 110%;
@@ -737,25 +732,8 @@ opacity: 1;
     position: absolute;
   }
 
-  .timer {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width:auto;
-    font-size: 1rem;
-    color: white;
-    opacity: 1;
-    text-align: center;
-    background:url(holder.png) no-repeat;
-    
-  }
-  .contA{
-    height: 5vh;
-    width: 5vw;
-    background:url(holder.png) 0% 0% no-repeat padding-box;
-    opacity: 1;
-    position: relative;
-  }
+  
+  
   
 }
 
