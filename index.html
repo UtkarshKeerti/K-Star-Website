@@ -1,172 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>K-Star</title>
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="./css/style.css">
-  <style>
-    .timer{
-    display: grid;
-    grid-template-columns:repeat(4,10vw);
-    align-items: center;
-    text-align:center;
-    width:fit-content;
-    height:15vh;
-    color:whitesmoke;
-    margin-bottom:2%
-    }
-    .timer-container{
-    display:grid;
-    grid-template-columns:repeat(1,6vw);
-    align-items:center;
-    justify-content:center;
-    height:14.6vh;
-    background:url(holder.png) no-repeat ;
-    background-size:100%;
-    align-items:center;
-    text-align:center;
-    font-size:1.3rem ;
-    font-weight:600;
-    font-family: sans-serif;
-    z-index:3;
-    }
-   
-  </style> 
-</head>
-<body>
-  <div class="mother-cont">
-  
-    <div class="coming-soon">
-      <div class="top-logos">
-        <ul class="logos">
-          <li><img src="./assets/kiit-logo.png" alt="" id="logo"style="width:7vh;"></li>
-          <li><img src="./assets/k-sac logo.png" alt="" id="logo-2" style="width:7vh;"></li>
-        </ul>
-        
-        
-        <div id="ksac"><i class="fas fa-comments" style=" color:whitesmoke; font-size:2.2rem;"></i></div>  
-      </div>
-      <div class="main-cont">
-        <div class="center-part">
-          <img  src="./assets/logo-blank@2x.png" alt=""id="kstar">
-         
-          <p id="intro">Champion's &nbspPride</p>
-         
-           <h1 id="coming">25<sup>th</sup> &nbsp-&nbsp27<sup>th</sup>&nbsp December</h1>
-          <div class="timer">
-           
-              <div class="timer-container" ><div class="back" id="Day"></div><div class="back">Days</div></div>
-              <div class="timer-container" ><div class="back" id="Hour"></div><div class="back">Hours</div></div>
-              <div class="timer-container" ><div class="back" id="minute"></div><div class="back">Min</div></div>
-              <div class="timer-container" > <div class="back" id="second"></div><div class="back">Sec</div></div>
-          
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>K-Star</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <style>
+      .timer {
+        display: grid;
+        grid-template-columns: repeat(4, 10vw);
+        align-items: center;
+        text-align: center;
+        width: fit-content;
+        height: 15vh;
+        color: whitesmoke;
+        margin-bottom: 2%;
+      }
+      .timer-container {
+        display: grid;
+        grid-template-columns: repeat(1, 6vw);
+        align-items: center;
+        justify-content: center;
+        height: 14.6vh;
+        background: url(holder.png) no-repeat;
+        background-size: 100%;
+        align-items: center;
+        text-align: center;
+        font-size: 1.3rem;
+        font-weight: 600;
+        font-family: sans-serif;
+        z-index: 3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mother-cont">
+      <div class="coming-soon">
+        <div class="top-logos">
+          <ul class="logos">
+            <li>
+              <img
+                src="./assets/kiit-logo.png"
+                alt=""
+                id="logo"
+                style="width: 7vh"
+              />
+            </li>
+            <li>
+              <img
+                src="./assets/k-sac logo.png"
+                alt=""
+                id="logo-2"
+                style="width: 7vh"
+              />
+            </li>
+          </ul>
+
+          <div id="ksac">
+            <i
+              class="fas fa-comments"
+              style="color: whitesmoke; font-size: 2.2rem"
+            ></i>
+          </div>
+        </div>
+        <div class="main-cont">
+          <div class="center-part">
+            <img src="./assets/logo-blank@2x.png" alt="" id="kstar" />
+
+            <p id="intro">Champion's &nbspPride</p>
+
+            <h1 id="coming">
+              25<sup>th</sup> &nbsp-&nbsp27<sup>th</sup>&nbsp December
+            </h1>
+            <div class="timer">
+              <div class="timer-container">
+                <div class="back" id="Day"></div>
+                <div class="back">Days</div>
+              </div>
+              <div class="timer-container">
+                <div class="back" id="Hour"></div>
+                <div class="back">Hours</div>
+              </div>
+              <div class="timer-container">
+                <div class="back" id="minute"></div>
+                <div class="back">Min</div>
+              </div>
+              <div class="timer-container">
+                <div class="back" id="second"></div>
+                <div class="back">Sec</div>
+              </div>
             </div>
-         <p id="colon-4">Times &nbsp Remaining</p>
-          <div class="planes">
-            <img class="p-orange" src="./assets/Group 218@2x.png" alt=""id="oran">
-            <img class="p-yellow" src="./assets/plane yellow.png" alt=""id="yell">
-            <img class="p-blue" src="./assets/Group219@2x.png" alt=""id="blu">
+            <p id="colon-4">Times &nbsp Remaining</p>
+            <div class="planes">
+              <img
+                class="p-orange"
+                src="./assets/Group 218@2x.png"
+                alt=""
+                id="oran"
+              />
+              <img
+                class="p-yellow"
+                src="./assets/plane yellow.png"
+                alt=""
+                id="yell"
+              />
+              <img
+                class="p-blue"
+                src="./assets/Group219@2x.png"
+                alt=""
+                id="blu"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="Arrow">
+          <i class="fas fa-angle-double-down" id="arrow"></i>
+        </div>
+        <div class="bottom-part">
+          <img src="./assets/bottom-cloud-new.png" alt="" id="bottom-cloud" />
+        </div>
+      </div>
+
+      <div class="mid-part">
+        <div style="text-align: center; margin-bottom: 7rem" class="top-text">
+          <img src="./assets/mid-part-heading.png" alt="" />
+        </div>
+        <div class="cart">
+          <img class="cart-img" src="./assets/cart.png" alt="" />
+          <div class="cart-items">
+            <a class="item" href="./item-html/music.html">
+              <div>
+                <img src="./assets/singing.png" alt="" />
+                <h2>Music</h2>
+              </div>
+            </a>
+            <a class="item" href="./item-html/dance.html">
+              <div>
+                <img src="./assets/dancing.png" alt="" />
+                <h2>Dance</h2>
+              </div>
+            </a>
+            <a class="item" href="./item-html/painting.html">
+              <div>
+                <img src="./assets/painting.png" alt="" />
+                <h2>Painting</h2>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="cart">
+          <img class="cart-img" src="./assets/cart.png" alt="" />
+          <div class="cart-items">
+            <a class="item" href="./item-html/acting.html">
+              <div>
+                <img src="./assets/acting.png" alt="" />
+                <h2>Acting</h2>
+              </div>
+            </a>
+            <a class="item" href="./item-html/design.html">
+              <div>
+                <img src="./assets/design.png" alt="" />
+                <h2>Design</h2>
+              </div>
+            </a>
+            <a class="item" href="./item-html/snapshot.html">
+              <div>
+                <img src="./assets/snapshot.png" alt="" />
+                <h2>Snapshot</h2>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="cart">
+          <img class="cart-img" src="./assets/cart.png" alt="" />
+          <div class="cart-items">
+            <a class="item" href="./item-html/fashion.html">
+              <div>
+                <img src="./assets/fashion.png" alt="" />
+                <h2>Fashion</h2>
+              </div>
+            </a>
+            <a class="item" href="./item-html/shortfilm.html">
+              <div>
+                <img src="./assets/Short-film.png" alt="" />
+                <h2>Short-Film</h2>
+              </div>
+            </a>
+            <a class="item" href="./item-html/writing.html">
+              <div>
+                <img src="./assets/writing.png" alt="" />
+                <h2>Writing</h2>
+              </div>
+            </a>
           </div>
         </div>
       </div>
-       <div class="Arrow"><i class="fas fa-angle-double-down"id="arrow"></i></div>
-       <div class="bottom-part">
-        
-        <img src="./assets/bottom-cloud-new.png" alt=""id="bottom-cloud">
-        
-      </div>
     </div>
-    
-
-    <div class="mid-part">
-      <div style="text-align: center; margin-bottom: 7rem;" class="top-text">
-        <img src="./assets/mid-part-heading.png" alt="">
-      </div>
-      <div class="cart">
-        <img class="cart-img" src="./assets/cart.png" alt="">
-        <div class="cart-items">
-          <a class="item" href="./item-html/music.html">
-            <div>
-              <img src="./assets/singing.png" alt="">
-              <h2>Music</h2>
-            </div>
-          </a>
-          <a class="item" href="./item-html/dance.html">
-            <div>
-              <img src="./assets/dancing.png" alt="">
-              <h2>Dance</h2>
-            </div>
-          </a>
-          <a class="item" href="./item-html/painting.html">
-            <div>
-              <img src="./assets/painting.png" alt="">
-              <h2>Painting</h2>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="cart">
-        <img class="cart-img" src="./assets/cart.png" alt="">
-        <div class="cart-items">
-          <a class="item" href="./item-html/acting.html">
-            <div>
-              <img src="./assets/acting.png" alt="">
-              <h2>Acting</h2>
-            </div>
-          </a>
-          <a class="item" href="./item-html/design.html">
-            <div>
-              <img src="./assets/design.png" alt="">
-              <h2>Design</h2>
-            </div>
-          </a>
-          <a class="item" href="./item-html/snapshot.html">
-            <div>
-              <img src="./assets/snapshot.png" alt="">
-              <h2>Snapshot</h2>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="cart">
-        <img class="cart-img" src="./assets/cart.png" alt="">
-        <div class="cart-items">
-          <a class="item" href="./item-html/fashion.html">
-          <div>
-            <img src="./assets/fashion.png" alt="">
-            <h2>Fashion</h2>
-          </div>
-          </a>
-          <a class="item" href="./item-html/shortfilm.html">
-            <div>
-              <img src="./assets/Short-film.png" alt="">
-              <h2>Short-Film</h2>
-            </div>
-          </a>
-          <a class="item" href="./item-html/writing.html">
-            <div>
-              <img src="./assets/writing.png" alt="">
-              <h2>Writing</h2>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="./main.js"></script>
-
-</body>
-</html> 
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
