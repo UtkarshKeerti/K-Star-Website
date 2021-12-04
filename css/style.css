@@ -414,7 +414,7 @@ body {
   margin-top: 0.75rem;
   padding-bottom: 0;
 }
-*/ .mid-part .cart .cart-items .item img {
+.mid-part .cart .cart-items .item img {
   background: transparent
     linear-gradient(0deg, #9051be 0%, #2fc1fd 43%, #9c3ffe 100%) 0% 0% no-repeat
     padding-box;
