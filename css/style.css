@@ -34,12 +34,15 @@ body {
 .mother-cont .coming-soon {
   min-height: 90vh;
   width: 100vw;
+  position: sticky;
   padding: 2.5rem 3.25rem 0 3.25rem;
   background: transparent -webkit-gradient(linear, left bottom, left top, from(#000428), to(#004E92)) 0% 0% no-repeat padding-box;
   background: transparent linear-gradient(0deg, #7840A2 0%, #2A0645 100%) 0% 0% no-repeat padding-box;
   opacity: 1;
   position: relative;
   overflow-x: hidden;
+   overflow-y: hidden;
+  
 }
 
 .mother-cont .coming-soon .top-logos {
@@ -52,13 +55,16 @@ body {
 }
 
 .mother-cont .coming-soon .top-logos #logo {
-  width: 70px;
-  height: 50px;
+ width:6vh;
+}
+.mother-cont .coming-soon .top-logos #logo-2{
+  width:5vh;
 }
 
 .mother-cont .coming-soon .top-logos #ksac {
-  width: 70px;
-  height: 60px;
+          color:whitesmoke;
+          font-size:2.2rem;
+
 }
 
 .mother-cont .coming-soon .main-cont {
@@ -70,7 +76,10 @@ body {
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
+  position: sticky;
+   height: fit-content;
+   overflow-y: hidden;
 }
 
 .mother-cont .coming-soon .center-part {
@@ -87,7 +96,9 @@ body {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
+  position: sticky;
+   overflow-y: hidden;
 }
 
 .mother-cont .coming-soon .center-part img {
@@ -114,7 +125,7 @@ body {
 .mother-cont .coming-soon .center-part p span {
   color: white;
   font-weight: 900;
-  opacity: 1 !important;
+  opacity: 1 ;
 }
 
 .mother-cont .coming-soon .bottom-part {
@@ -128,19 +139,21 @@ body {
   bottom: 0px;
   left: -20px;
   background-image:url(./assets/bottom-cloud-new.png);
-  background-attachment:fixed;
+  background-attachment:sticky;
   background-color: transparent;
 }
-.mother-cont .coming-soon .Arrow {
-display: flex;
-justify-content:center;
-transform:translateY(10%);
-}
+
 
 .mother-cont .coming-soon  #arrow{
-  display:block;
+  display: flex;
+  justify-content:center;
+  transform:translateY(10%);
   color:#2A0645;
   font-size:5rem;
+}
+
+.mother-cont .coming-soon .white {
+  display: none;
 }
 
 .mother-cont .coming-soon  .bottom-cloud-mob {
@@ -161,8 +174,8 @@ transform:translateY(10%);
 .mother-cont .coming-soon .planes .p-yellow {
   top: 32%;
   left: 180px;
-  height: 100px;
-  width: 80px;
+  height: 80px;
+  width: 60px;
 }
 
 .mother-cont .coming-soon .planes .p-blue {
@@ -196,13 +209,22 @@ transform:translateY(10%);
 #blu {
   top: 10%;
   right: 35%;
-  height:144px;
-  width:138px;
+  height:100px;
+  width:90px;
 }
 
 #yell {
   top: 25%;
   left:25%;
+}
+#Day,#Hour,#minute,#second {
+width:80%;
+margin-top:10px;
+margin-right: 0.3rem;
+margin-left:0.7rem;
+font-size:2.5rem;
+font-weight: 900;
+z-index:5;
 }
 
 .day{
@@ -223,11 +245,7 @@ width: 6vw;
 /* background-image: url('holder.png'); */
 opacity: 1;
 }
-.arrow{
-  height: 6vh;
-  width: 6vw;
-  background-image:url('./assets/arrow.png');
-}
+
 #colon-1 , #colon-2, #colon-3{
   font-size:3rem;
   font-weight: 100;
@@ -248,7 +266,7 @@ opacity: 1;
   margin-top: -6%;
   z-index:5;
 }
-
+/* 
 @-webkit-keyframes anim {
   0% {
     opacity: 0;
@@ -285,7 +303,7 @@ opacity: 1;
     top: 0%;
     opacity: 0;
   }
-}
+} */
 
 .p-yellow {
   top: 32%;
@@ -328,7 +346,9 @@ opacity: 1;
             transform: translateX(0%);
   }
 }
-
+#mob-orange {
+  display:flex;
+}
 .mid-part{
   background: transparent linear-gradient(0deg, #9051BE 0%, #2FC1FD 43%, #9C3FFE 100%) 0% 0% no-repeat padding-box;
   padding: 5rem;
@@ -639,112 +659,16 @@ opacity: 1;
   -webkit-transition: opacity 3s ease;
   transition: opacity 3s ease;
 } */
-
-@media screen and (max-width: 767px) {
-  body {
-    overflow-x: hidden;
-  }
-  .mother-cont {
-    overflow-x: hidden;
-  }
-  .mother-cont .coming-soon {
-    padding: 1.5rem 2rem 0 2rem;
-  }
-  .mother-cont .center-part {
-    display: block;
-  }
-  .mother-cont .center-part p {
-    white-space: nowrap;
-  }
-  .mother-cont .main-cont {
-    height: 60vh;
-  }
-  .mother-cont .planes {
-    height: 0 !important;
-  }
-  .mother-cont .top-logos #logo {
-    width: 60px !important;
-    height: 40px !important;
-  }
-  .mother-cont .top-logos #ksac {
-    width: 60px !important;
-    height: 50px !important;
-  }
-  .top-logos{
-    display: flex;
-    justify-content: space-between;
-  }
-  #coming {
-    font-size: 2.5em;
-  }
-  #intro {
-    font-size: 0.95em;
-  }
-  #logo {
-    width: 11%;
-    height: 11%;
-    position: flex-start;
-  }
-  #logo-2{
-    width: 1vw !important;
-    height: 1vh !important;
-    position: flex-start;
-    top:0;
-  }
-  #ksac {
-    position: flex-end;
-    color: whitesmoke !important;
-    font-size:1.9rem !important;
-  }
-  #kstar {
-    width: 70%;
-    height: 90%;
-  }
-  #yell {
-    top: 92%;
-    left: 5%;
-    height: 60px;
-    width: 40px;
-      }
-  #blu {
-    top: 90%;
-    right: 12%;
-    height: 60px;
-    width: 40px;
-    -webkit-animation: anim 2s ease-in-out infinite 0s;
-            animation: anim 2s ease-in-out infinite 0s;
-  }
-  #oran {
-    top: 80%;
-    right: 5%;
-    height: 40px;
-    width: 30px;
-    -webkit-animation: anim 2s ease-in-out infinite 1.5s;
-            animation: anim 2s ease-in-out infinite 1.5s;
-  }
-  
-
-  .bottom-cloud-mob {
-    display: block !important;
-    width: 110%;
-    bottom: 0;
-    left: -10px;
-    position: absolute;
-  }
-
-  
-  
-  
-}
-
 @media screen and (max-width: 1200px) {
   .mother-cont .coming-soon .center-part img {
     width: 300px;
     height: 100px;
   }
+
   .mother-cont .coming-soon .center-part h1 {
     font-size: 3.5rem;
   }
+
   .mother-cont .coming-soon .center-part p {
     font-size: 1rem;
   }
@@ -761,4 +685,135 @@ opacity: 1;
     bottom: -200px !important;
   }
 }
+
+@media screen and (max-width: 767px) {
+  body {
+    overflow-x: hidden;
+    margin: 0 ;
+  }
+  .mother-cont {
+    overflow-x: hidden;
+  }
+  .mother-cont .coming-soon {
+    padding: 0.5rem 1.5rem 0 1.5rem;
+  }
+  .mother-cont .center-part {
+    display: block;
+    overflow-y: hidden;
+  }
+  .mother-cont .center-part p {
+    white-space: nowrap;
+  }
+  .mother-cont .main-cont {
+    height: 100vh;
+    overflow-y: hidden;
+  }
+  .mother-cont .planes {
+    height: 5vh;
+    display: flex;
+
+  }
+  .mother-cont .coming-soon .top-logos .logos{
+    margin-top: 0%;
+    display:grid;
+    grid-template-columns:repeat(2,11vw );
+    grid-gap:5px;
+    width: 90vw;
+  }
+  .mother-cont .coming-soon .top-logos .logos #logo {
+    height: 5vh;
+    position: flex-start;
+  }
+
+  .mother-cont .coming-soon .top-logos .logos #logo-2 {
+    height: 5vh;
+    position: flex-start;
+    margin-left: 12px;
+    top: 0;
+  }
+
+  .mother-cont .coming-soon .top-logos #ksac {
+    position: flex-end;
+    color: whitesmoke;
+    width:9vw;
+    font-size: 1.2rem;
+  }
+  
+  
+  #coming {
+    height: fit-content;
+    font-size: 1.5em;
+  }
+  #intro {
+    font-size: 1.6rem;
+    letter-spacing:3px;
+  }
+  
+  #kstar {
+    margin-left: 10%;
+    width: 70%;
+    height: 20%;
+  }
+  #yell {
+    margin-top: 5%;
+    left: 5%;
+    height: 50px;
+    width: 30px;
+      }
+  #blu {
+    top: 90%;
+    right: 12%;
+    height: 60px;
+    width: 40px;
+    -webkit-animation: anim 2s ease-in-out infinite 0s;
+            animation: anim 2s ease-in-out infinite 0s;
+    transform:rotate(22.5deg);
+  }
+  #oran {
+    
+    right: 5%;
+    height: 80px;
+    width: 60px;
+    -webkit-animation: anim 2s ease-in-out infinite 1.5s;
+            animation: anim 2s ease-in-out infinite 1.5s;
+  }
+  .mother-cont .coming-soon .white {
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    font-weight: 100;
+    font-size: 1.2rem;
+
+  }
+  .mother-cont .coming-soon #arrow{
+    font-size:1.2rem;
+    font-weight: 100;
+    color: whitesmoke;
+  }
+  #colon-4{
+    font-size: 1.3rem;
+  }
+  #Day,#Hour,#minute,#second {
+    width: 80%;
+    margin-top: 10px;
+    margin-left:0.4rem ;
+    font-size: 1.2rem;
+    font-weight: 700;
+    z-index: 5;
+  }
+  
+
+  .bottom-cloud-mob {
+    display: block !important;
+    width: 110%;
+    bottom: 0;
+    left: -10px;
+    position: absolute;
+  }
+
+  
+  
+}
+
+
 /*# sourceMappingURL=style.css.map */
