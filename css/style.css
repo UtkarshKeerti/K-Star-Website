@@ -839,12 +839,12 @@ form .form-right img {
     height: 1vh;
   }
   .mother-cont .top-logos #logo {
-    width: 60px !important;
-    height: 40px !important;
+    width: 60px ;
+    height: 40px ;
   }
   .mother-cont .top-logos #ksac {
-    width: 60px !important;
-    height: 50px !important;
+    width: 60px ;
+    height: 50px;
   }
   .top-logos {
     display: flex;
@@ -858,7 +858,8 @@ form .form-right img {
     width: 90vw;
   }
   .mother-cont .coming-soon .top-logos .logos #logo {
-    width: 12vw;
+    width: vw;
+    height: 5vh;
     position: flex-start;
   }
 
@@ -907,7 +908,7 @@ form .form-right img {
     transform:rotate(22.5deg);
   }
   #oran {
-    
+    margin-bottom: 2rem;
     right: 5%;
     height: 80px;
     width: 60px;
