@@ -5,6 +5,7 @@
   padding: 0;
   list-style: none;
   text-decoration: none;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -22,7 +23,7 @@ body {
 .mother-cont {
   position: relative;
   overflow-x: hidden;
-  height: fit-content;
+  height: 100vh;
   width: 100vw;
 }
 #intro {
