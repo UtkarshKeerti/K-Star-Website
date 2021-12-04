@@ -8,12 +8,6 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap"
       rel="stylesheet"
@@ -34,7 +28,7 @@
       .timer {
         display: grid;
         grid-template-columns: repeat(4, 10vw);
-        align-items: center;
+        /*align-items: center;*/
         text-align: center;
         width: fit-content;
         height: 15vh;
@@ -42,19 +36,85 @@
         margin-bottom: 2%;
       }
       .timer-container {
+        position: relative;
+        opacity: 0.99;
         display: grid;
         grid-template-columns: repeat(1, 6vw);
         align-items: center;
         justify-content: center;
         height: 14.6vh;
-        background: url(holder.png) no-repeat;
-        background-size: 100%;
+        /* background:url(holder.png) no-repeat center;*/
+
         align-items: center;
         text-align: center;
         font-size: 1.3rem;
         font-weight: 600;
         font-family: sans-serif;
         z-index: 3;
+      }
+      .timer-container::after {
+        content: "";
+        position: absolute;
+        background: url(holder.png) no-repeat center;
+        background-size: 100%;
+        z-index: -1;
+        opacity: 0.7;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+      }
+      .back-desc {
+        margin-bottom: 1.4rem;
+        font-size: 0.8rem;
+      }
+      .top-cloud {
+        display: none;
+        /*background:url(../assets/Group479.png) no-repeat center;*/
+      }
+      @media screen and (max-width: 767px) {
+        .timer {
+          display: grid;
+          grid-template-columns: repeat(4, 20vw);
+          text-align: center;
+          width: fit-content;
+          height: 15vh;
+          color: whitesmoke;
+        }
+        .timer-container {
+          display: grid;
+          grid-template-columns: repeat(1, 15vw);
+          align-items: center;
+          justify-content: center;
+          height: 8.6vh;
+          background: url(holder.png) no-repeat;
+          background-size: 100%;
+          align-items: center;
+          text-align: center;
+          font-size: 0.7rem;
+          font-weight: 600;
+          font-family: sans-serif;
+          z-index: -2;
+        }
+        #top-cloud-container-left,
+        #top-cloud-container-right {
+          margin-left: -30px;
+        }
+        #top-cloud {
+          height: 20vh;
+          width: 120vw;
+          margin: auto;
+
+          /*background:url(../assets/Group479.png) no-repeat  no-repeat center bottom/cover;*/
+        }
+        .timer-container::after {
+          content: "";
+          display: none;
+        }
+        .back-desc {
+          margin-bottom: 2.2rem;
+          font-size: 0.5rem;
+        }
       }
     </style>
   </head>
@@ -64,20 +124,10 @@
         <div class="top-logos">
           <ul class="logos">
             <li>
-              <img
-                src="./assets/kiit-logo.png"
-                alt=""
-                id="logo"
-                style="width: 7vh"
-              />
+              <img src="./assets/kiit-logo.png" alt="" id="logo" />
             </li>
             <li>
-              <img
-                src="./assets/k-sac logo.png"
-                alt=""
-                id="logo-2"
-                style="width: 7vh"
-              />
+              <img src="./assets/k-sac logo.png" alt="" id="logo-2" />
             </li>
           </ul>
 
@@ -87,33 +137,31 @@
               style="color: whitesmoke; font-size: 2.2rem"
             ></i>
           </div>
+          <div id="top-cloud-1-container">
+            <img src="./assets/Subtraction 15.png" alt="" />
+          </div>
+          <div id="top-cloud-2-container">
+            <img src="./assets/Subtraction 17.png" alt="" />
+          </div>
         </div>
+        <!-- Top cloud -->
+
+        <br />
+
         <div class="main-cont">
+          <br />
+
           <div class="center-part">
-            <img src="./assets/logo-blank@2x.png" alt="" id="kstar" />
-
-            <p id="intro">Champion's Pride</p>
-
-            <h1 id="coming">25<sup>th</sup> - 27<sup>th</sup> December</h1>
-            <div class="timer">
-              <div class="timer-container">
-                <div class="back" id="Day"></div>
-                <div class="back">Days</div>
-              </div>
-              <div class="timer-container">
-                <div class="back" id="Hour"></div>
-                <div class="back">Hours</div>
-              </div>
-              <div class="timer-container">
-                <div class="back" id="minute"></div>
-                <div class="back">Min</div>
-              </div>
-              <div class="timer-container">
-                <div class="back" id="second"></div>
-                <div class="back">Sec</div>
-              </div>
+            <div id="mob-orange">
+              <img src="./assets/logo-blank@2x.png" alt="" id="kstar" />
+              <img
+                class="p-blue"
+                src="./assets/Group219@2x.png"
+                alt=""
+                id="blu"
+              />
             </div>
-            <p id="colon-4">Time Remaining</p>
+            <p id="intro">Champion's Pride</p>
             <div class="planes">
               <img
                 class="p-orange"
@@ -127,17 +175,36 @@
                 alt=""
                 id="yell"
               />
-              <img
-                class="p-blue"
-                src="./assets/Group219@2x.png"
-                alt=""
-                id="blu"
-              />
             </div>
+
+            <h1 id="coming">
+              25<sup>th</sup> &nbsp-&nbsp27<sup>th</sup>&nbsp December
+            </h1>
+
+            <!-- Timer BOXES -->
+            <div class="timer">
+              <div class="timer-container">
+                <div class="back" id="Day"></div>
+                <div class="back-desc">Days</div>
+              </div>
+              <div class="timer-container">
+                <div class="back" id="Hour"></div>
+                <div class="back-desc">Hours</div>
+              </div>
+              <div class="timer-container">
+                <div class="back" id="minute"></div>
+                <div class="back-desc">Min</div>
+              </div>
+              <div class="timer-container">
+                <div class="back" id="second"></div>
+                <div class="back-desc">Sec</div>
+              </div>
+            </div>
+            <!-- Rimer Ends -->
+            <p id="colon-4">Times &nbsp Remaining</p>
+            <p class="white">scroll down to see more</p>
+            <div id="arrow"><i class="fas fa-angle-double-down"></i></div>
           </div>
-        </div>
-        <div class="Arrow">
-          <i class="fas fa-angle-double-down" id="arrow"></i>
         </div>
         <div class="bottom-part">
           <img src="./assets/bottom-cloud-new.png" alt="" id="bottom-cloud" />
