@@ -396,6 +396,7 @@ body {
   color: white;
   font-size: 1.3rem;
   padding-bottom: 0;
+  color: white;
   transition: 0.3s ease;
 }
 
@@ -412,7 +413,6 @@ body {
 } */
 
 .mid-part .cart .cart-items .item h2 {
-  color: white;
   font-size: 2.5rem;
   font-weight: 500;
   line-height: 65px;
@@ -438,7 +438,7 @@ body {
     0% no-repeat padding-box;
 }
 
-.super-cont .head-part {
+.head-part {
   display: flex;
   justify-content: space-between;
   padding: 3rem 3.5rem 0 6rem;
@@ -446,28 +446,28 @@ body {
   height: 15vh;
 }
 
-.super-cont .head-part .item-head {
+.head-part .item-head {
   width: 50%;
 }
 
-.super-cont .head-part .head-right {
+.head-part .head-right {
   display: flex;
   align-items: center;
 }
 
-.super-cont .head-part .head-right .home,
+.head-part .head-right .home,
 .c-us {
   display: flex;
   align-items: center;
 }
 
-.super-cont .head-part .head-right i {
+.head-part .head-right i {
   color: white;
   font-size: 1.5rem;
   margin-right: 0.5rem;
 }
 
-.super-cont .head-part .head-right p {
+.head-part .head-right p {
   color: white;
   font-size: 1.5rem;
   padding-bottom: 0;
@@ -557,7 +557,8 @@ body {
 }
 
 .super-cont .center-part .center-right img {
-  width: 100%;
+  width: 90%;
+  height: 100%;
 }
 
 .form-cont {
