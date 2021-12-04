@@ -40,3 +40,9 @@ var x = setInterval(function() {
     document.getElementById("demo").innerHTML = "EXPIRED";
   }
 }, 1000);
+
+function textchange(val){
+  var id= document.getElementsByClassName("toc-dropdown-text")[val];
+  $("#dropdownMenuButton1").html(id.innerHTML);
+  console.log(id.innerHTML);
+}
