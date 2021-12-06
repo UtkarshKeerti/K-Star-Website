@@ -15,11 +15,6 @@ a {
 
 body {
   font-family: "Montserrat", sans-serif;
-  overflow-x: hidden;
-}
-.logos {
-  display: grid;
-  grid-template-columns: repeat(2, 6vw);
 }
 .mother-cont {
   position: relative;
@@ -34,24 +29,15 @@ body {
 }
 
 .mother-cont .coming-soon {
-  min-height: 90vh;
-  width: 100vw;
+  min-height: 100vh;
+  width: 100%;
   position: sticky;
-  padding: 2.5rem 3.25rem 0 3.25rem;
-  background: transparent -webkit-gradient(
-      linear,
-      left bottom,
-      left top,
-      from(#000428),
-      to(#004e92)
-    ) 0% 0% no-repeat padding-box;
-  background: transparent linear-gradient(0deg, #7840a2 0%, #2a0645 100%) 0% 0%
-    no-repeat padding-box;
+  padding: 3.25rem 3.25rem 0;
+  background: transparent linear-gradient(0deg, #7840a2 0%, #2a0645 100%) 0% 0%;
   opacity: 1;
   position: relative;
   overflow-x: hidden;
-   overflow-y: hidden;
-  
+  overflow-y: hidden;
 }
 
 .mother-cont .coming-soon .top-logos {
@@ -60,20 +46,31 @@ body {
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
-
+.top-logos .logos {
+  display: flex;
+}
 .mother-cont .coming-soon .top-logos #logo {
- width:6vh;
+  width: 5.4vw;
+  max-height: 79px;
+  aspect-ratio: 1;
+  margin-right: 2.6rem;
 }
-.mother-cont .coming-soon .top-logos #logo-2{
-  width:5vh;
+.mother-cont .coming-soon .top-logos #logo-2 {
+  width: 5.25vw;
+  max-height: 79px;
+  /* height: 5.6875rem; */
+}
+#logo-3 {
+  margin-left: auto;
+  width: 3.6vw;
+  height: 3.6vw;
 }
 
 .mother-cont .coming-soon .top-logos #ksac {
-          color:whitesmoke;
-          font-size:2.2rem;
-
+  color: whitesmoke;
+  font-size: 2.2rem;
 }
 
 .mother-cont .coming-soon .main-cont {
@@ -84,11 +81,11 @@ body {
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   position: sticky;
-   height: fit-content;
-   overflow-y: hidden;
+  height: fit-content;
+  overflow-y: hidden;
 }
 
 .mother-cont .coming-soon .center-part {
@@ -104,16 +101,20 @@ body {
   justify-content: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
   position: sticky;
-   overflow-y: hidden;
+  overflow-y: hidden;
+}
+
+.mother-cont .coming-soon .center-part #mob-orange {
+  margin: auto;
+  text-align: center;
 }
 
 .mother-cont .coming-soon .center-part img {
-  width: 350px;
-  height: 130px;
-  margin-bottom: 10px;
+  width: 37vw;
+  margin: 0 auto 10px;
 }
 
 .mother-cont .coming-soon .center-part h1 {
@@ -135,7 +136,7 @@ body {
 .mother-cont .coming-soon .center-part p span {
   color: white;
   font-weight: 900;
-  opacity: 1 ;
+  opacity: 1;
 }
 
 .mother-cont .coming-soon .bottom-part {
@@ -148,25 +149,24 @@ body {
   width: 110%;
   bottom: 0px;
   left: -20px;
-  background-image:url(./assets/bottom-cloud-new.png);
-  background-attachment:sticky;
+  background-image: url(./assets/bottom-cloud-new.png);
+  background-attachment: sticky;
   background-color: transparent;
 }
 
-
-.mother-cont .coming-soon  #arrow{
+.mother-cont .coming-soon #arrow {
   display: flex;
-  justify-content:center;
-  transform:translateY(10%);
-  color:#2A0645;
-  font-size:5rem;
+  justify-content: center;
+  transform: translateY(10%);
+  color: #2a0645;
+  font-size: 5rem;
 }
 
 .mother-cont .coming-soon .white {
   display: none;
 }
 
-.mother-cont .coming-soon  .bottom-cloud-mob {
+.mother-cont .coming-soon .bottom-cloud-mob {
   display: none;
 }
 
@@ -201,7 +201,9 @@ body {
   width: 103px;
 }
 #coming {
-  font: normal normal bold 71px/95px Segoe UI;
+  margin-top: 2rem;
+  font: normal normal bold 60px/80px Segoe UI;
+  text-align: center;
   letter-spacing: 0px;
   color: #ffffff;
   opacity: 1;
@@ -217,22 +219,26 @@ body {
 #blu {
   top: 10%;
   right: 35%;
-  height:100px;
-  width:90px;
+  height: 100px;
+  width: 90px;
 }
 
 #yell {
   top: 25%;
   left: 25%;
 }
-#Day,#Hour,#minute,#second {
-width:80%;
-margin-top:10px;
-margin-right: 0.3rem;
-margin-left:0.7rem;
-font-size:2.5rem;
-font-weight: 900;
-z-index:5;
+#Day,
+#Hour,
+#minute,
+#second {
+  /* width: 80%;
+  margin-top: 10px;
+  margin-right: 0.3rem;
+  margin-left: 0.7rem;
+  font-size: 2.5rem;
+  font-weight: 900;
+  z-index: 5; */
+  font: normal normal bold 32px/36px Segoe UI;
 }
 
 .day {
@@ -830,11 +836,6 @@ form .form-right img {
   transition: opacity 3s ease;
 } */
 @media screen and (max-width: 1200px) {
-  .mother-cont .coming-soon .center-part img {
-    width: 300px;
-    height: 100px;
-  }
-
   .mother-cont .coming-soon .center-part h1 {
     font-size: 3.5rem;
   }
@@ -909,7 +910,7 @@ form .form-right img {
 @media screen and (max-width: 767px) {
   body {
     overflow-x: hidden;
-    margin: 0 ;
+    margin: 0;
   }
   .mother-cont {
     overflow-x: hidden;
@@ -932,22 +933,21 @@ form .form-right img {
     height: 1vh;
   }
   .mother-cont .top-logos #logo {
-    width: 60px ;
-    height: 40px ;
+    width: 60px;
+    height: 40px;
   }
   .mother-cont .top-logos #ksac {
-    width: 60px ;
+    width: 60px;
     height: 50px;
   }
   .top-logos {
     display: flex;
-
   }
-  .mother-cont .coming-soon .top-logos .logos{
+  .mother-cont .coming-soon .top-logos .logos {
     margin-top: 0%;
-    display:grid;
-    grid-template-columns:repeat(2,11vw );
-    grid-gap:5px;
+    display: grid;
+    grid-template-columns: repeat(2, 11vw);
+    grid-gap: 5px;
     width: 90vw;
   }
   .mother-cont .coming-soon .top-logos .logos #logo {
@@ -966,39 +966,33 @@ form .form-right img {
   .mother-cont .coming-soon .top-logos #ksac {
     position: flex-end;
     color: whitesmoke;
-    width:9vw;
+    width: 9vw;
     font-size: 1.2rem;
   }
-  
-  
+
   #coming {
     height: fit-content;
-    font-size: 1.5em;
+    font-size: 1.3rem;
+    line-height: 30px;
   }
   #intro {
     font-size: 1.6rem;
-    letter-spacing:3px;
-  }
-  
-  #kstar {
-    margin-left: 10%;
-    width: 70%;
-    height: 20%;
+    letter-spacing: 3px;
   }
   #yell {
     margin-top: 5%;
     left: 5%;
     height: 50px;
     width: 30px;
-      }
+  }
   #blu {
     top: 90%;
     right: 12%;
     height: 60px;
     width: 40px;
     -webkit-animation: anim 2s ease-in-out infinite 0s;
-            animation: anim 2s ease-in-out infinite 0s;
-    transform:rotate(22.5deg);
+    animation: anim 2s ease-in-out infinite 0s;
+    transform: rotate(22.5deg);
   }
   #oran {
     margin-bottom: 2rem;
@@ -1014,25 +1008,15 @@ form .form-right img {
     justify-content: center;
     font-weight: 100;
     font-size: 1.2rem;
-
   }
-  .mother-cont .coming-soon #arrow{
-    font-size:1.2rem;
+  .mother-cont .coming-soon #arrow {
+    font-size: 1.2rem;
     font-weight: 100;
     color: whitesmoke;
   }
-  #colon-4{
+  #colon-4 {
     font-size: 1.3rem;
   }
-  #Day,#Hour,#minute,#second {
-    width: 80%;
-    margin-top: 10px;
-    margin-left:0.4rem ;
-    font-size: 1.2rem;
-    font-weight: 700;
-    z-index: 5;
-  }
-  
 
   .bottom-cloud-mob {
     display: block !important;
@@ -1041,7 +1025,7 @@ form .form-right img {
     left: -10px;
     position: absolute;
   }
- .super-cont .head-part {
+  .super-cont .head-part {
     padding: 0 2rem;
   }
   .super-cont .center-part {
@@ -1066,8 +1050,7 @@ form .form-right img {
     margin: 0 0.5rem;
   }
   .mother-cont .coming-soon .center-part img {
-    width: 300px;
-    height: 100px;
+    width: 65%;
   }
   .mother-cont .coming-soon .center-part h1 {
     font-size: 3.5rem;
@@ -1076,6 +1059,5 @@ form .form-right img {
     font-size: 1rem;
   }
 }
-
 
 /*# sourceMappingURL=style.css.map */

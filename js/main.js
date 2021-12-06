@@ -1,3 +1,6 @@
+$(document).ready(function() {
+  $("html").niceScroll();
+});
 
 // function slide() {
 //   document.getElementsByClassName("curtainContainer")[0].style.transform =
