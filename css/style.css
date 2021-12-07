@@ -23,7 +23,7 @@ body {
   width: 100vw;
 }
 #intro {
-  font: normal normal bold 47px/63px Segoe UI;
+  font: normal normal bold 40px/58px Segoe UI;
   letter-spacing: 14.1px;
   color: #fec416;
 }
@@ -201,14 +201,13 @@ body {
   width: 103px;
 }
 #coming {
-  margin-top: 2rem;
-  font: normal normal bold 60px/80px Segoe UI;
+  margin-top: 1.5rem;
+  font: normal normal bold 48px/52px Segoe UI;
   text-align: center;
   letter-spacing: 0px;
   color: #ffffff;
   opacity: 1;
   text-shadow: none;
-  font-size: 4rem;
 }
 #oran {
   top: 40%;
@@ -269,12 +268,8 @@ body {
   opacity: 1;
   color: #fff;
 }
-#colon-4,
-#colon-5,
-#colon-6,
-#colon-7,
-#colon-8 {
-  font-weight: 300;
+#colon-4 {
+  font: normal normal bold 29px/38px Segoe UI;
   opacity: 1;
   color: #fff;
   margin-top: 3%;
